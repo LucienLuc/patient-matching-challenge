@@ -238,7 +238,6 @@ def getConfidenceScore(row1, row2):
     score = 0
     for s in newConfidenceScores:
         score += s
-
     return score
 
 def groupByConfidenceScore(data, confidenceThreshold):

@@ -20,7 +20,7 @@ Members:
 2. Calculated similarities using Leveneshtein distance, double Monophone, and other edge cases
 3. Normalized data and calculations
 3. Tested with various weights for different columns to maximize accuracy
-3. Prints out which PatientID's are in which groups
+3. Constructs a 2D Array with each row sorted into respective groups
 
 ## Contact info
 

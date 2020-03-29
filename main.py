@@ -16,6 +16,7 @@ if __name__ == "__main__":
     result = algorithm.groupByConfidenceScore(data,0.68)
 
     #Output formatted as <Our Group#>:<PatientID>
+    print('Printing by ID')
     counter = 1
     for groups in result:
         for patient in groups:
@@ -23,6 +24,7 @@ if __name__ == "__main__":
         counter += 1
 
     print("---------------")
+    print('Printing by categorization')
     #easier to see groups
     #formatted as <Our Group#>:<True Group Number>
     #actual values of numbers don't matter, just the categorization

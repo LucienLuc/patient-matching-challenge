@@ -2,6 +2,7 @@ import csv
 
 import utility
 import dictionaries
+
 def calculatePatientAcctNumConfidence(patientAcctNum1, patientAcctNum2):
     if patientAcctNum1 == "" or patientAcctNum2 == "":
         return None
@@ -144,7 +145,6 @@ def calculateCityConfidence(city1, city2):
         confidence = min(1/(pow(distance+1, distance+1)) + dmetaScore + abbreviationScore + shortenedScore, 1)
         return confidence
 
-#typos on abbreviations really screw this up   
 def calculateStateConfidence(state1, state2):
     #convert abbreviations to full states
     if state1 == "" or state2 == "":
@@ -167,11 +167,6 @@ def calculateZipConfidence(zip1, zip2):
         return None
     else:
         distance = utility.levenshtein(zip1, zip2) 
-    # distance -> confidence
-    #0 -> 1
-    #1 -> 0.5
-    #2 -> 0.11
-    #3 -> .0156
         confidence = 1/(pow(distance+1, distance))
         return confidence
 
@@ -244,7 +239,6 @@ def getConfidenceScore(row1, row2):
     for s in newConfidenceScores:
         score += s
 
-    #print("Total confidence: " + str(score))
     return score
 
 def groupByConfidenceScore(data, confidenceThreshold):
@@ -261,5 +255,4 @@ def groupByConfidenceScore(data, confidenceThreshold):
                     group.append(row2)
                     alreadyAddedList.append(row2)
         result.append(group)
-    print(len(result))
     return result

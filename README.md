@@ -8,10 +8,12 @@ Members:
 ## Set up instructions
 1. In Python
 2. Necessary library installation
-  -pip install python-levenshtein
-  -pip install fuzzy
-  -pip install csv
-  -pip install re
+  ```
+  pip install python-levenshtein
+  pip install fuzzy
+  pip install csv
+  pip install re
+  ```
 3. run main.py
 ## Proof of Concept Steps
 1. Data stored in .csv file
@@ -26,4 +28,4 @@ Members:
 lucienluc@ucsb.edu
 andersontcolby@gmail.com
 
-Devpost link: 
+Devpost link: https://devpost.com/software/patient-match 
